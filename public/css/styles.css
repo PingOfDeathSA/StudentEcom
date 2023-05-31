@@ -154,10 +154,16 @@ width: 200px;
 height: 100px;
 }
 
-.body-all{
+.body-all {
   background-color: #d8d5d5;
-
 }
+
+@media (max-width: 767px) {
+  .body-all {
+    background-color: white;
+  }
+}
+
 .main-items{
  background-color: rgb(255, 255, 255);
   margin-left: 10%;

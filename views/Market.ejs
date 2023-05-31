@@ -182,8 +182,8 @@
             
               </div>
             <% Learn.forEach(function(item) { %>
-            <div class="container-main-Card" >
-              <h5 class="items" style="font-weight: bold; margin-left: 6%; font-size: 90%;">
+            <div class="container-main-Card" style="margin-top: 4%;" >
+              <h5 class="items" style="font-weight: bold; margin-left: 6%; font-size: 90%;margin-top: 3%;">
                 <%= item.Product_Name.length > 15 ? item.Product_Name.slice(0, 15) + '...' : item.Product_Name %>
               </h5>
               
@@ -218,7 +218,7 @@
            
                 
 
-                  <span style="  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class=""><%= item.Contacts %></span>
+                  <span style="  margin-bottom: 2%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class=""><%= item.Contacts %></span>
                   <span type="button" class="badge badge-danger" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" data-toggle="modal" data-target="#popup<%= item._id %>"> View</span>
                 </div>
              
