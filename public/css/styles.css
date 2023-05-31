@@ -1,0 +1,182 @@
+.Regisbody{
+  height: 1000px;
+  background-color: #ebebeb; /* white background color */
+  
+}
+.custom-border {
+  border: 1px solid black;
+}
+.light-gray {
+  background-color: lightgray;
+}
+
+
+@font-face {
+  font-family: 'Suissnord';
+  src: url('path/to/your/font/Suissnord.woff2') format('woff2'),
+       url('path/to/your/font/Suissnord.woff') format('woff');
+}
+.topraw {
+  padding-bottom: 1%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  border: solid;
+  border-bottom-width: 5px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  margin: 0%;
+  border-color: black;
+}
+
+.banner-top{
+background-color: rgb(206, 204, 204);
+margin-bottom: 2%;
+padding-bottom: 1%;
+margin-left: 10%;
+margin-right: 10%;
+}
+.ProductCard{
+margin-left: 5%;
+height:200px;
+width: 200px;
+/* border-radius: 10px; */
+}
+.ProductCard3{
+  margin-left: 5%;
+  height:200px;
+  width: 150px;
+  /* border-radius: 10px; */
+  }
+.modal-dialog {
+    margin: 0%;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    /* transform: none; */  
+}
+
+
+.my-custom-dialog {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 0;
+  left: 36%;
+  height: 100%;
+  width: 30%;
+  z-index: 1050;
+  overflow: hidden;
+}
+.my-custom-dialog.modal-dialog-right {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+}
+
+.my-custom-dialog.modal-dialog-right.show {
+  transform: translateX(0);
+}
+
+
+
+.modal-body{
+  height: 500px;
+}
+.butto-n{
+    padding: 10px; margin-left:75px
+}
+.ProductCard2{
+    margin-left: 5%;
+    height:100px;
+    width: 100px;
+    border-radius: 10px;  
+}
+
+
+.ProductCard2 {
+    transition: all 0.5s;
+  }
+  
+  .ProductCard2:hover{
+    margin-left: 5%;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+  }
+  .product-details{
+    font-weight:500;
+    /* border-radius: 10px; */
+    width: 300px;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+  }
+  .slug{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 170%;
+    margin-left: 5%;
+
+  }
+  .ProductCard {
+    display: inline;
+  }
+  .items{
+    margin: 0%;
+    padding: 0%;
+  }
+
+  
+.Card-size{
+  width: 400px;
+  height: 400px;
+}
+.ProductCardMain {
+  width: 120px;
+  
+  /* border-radius: 10px; */
+  margin-left: 5%;
+}
+
+.ProductCardMain img {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-main-Card{
+
+  margin-top: 2%;
+  display: inline-block;
+   width: 150px; 
+height: 100px;
+}
+
+.body-all{
+  background-color: #d8d5d5;
+
+}
+.main-items{
+ background-color: rgb(255, 255, 255);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.card-icon {
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon i {
+  color: #fff;
+  font-size: 24px;
+  border-color: rgb(245, 36, 22);
+}
+
