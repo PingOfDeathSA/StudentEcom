@@ -59,58 +59,66 @@
 
     <body>
 
-      <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Welcome to TUT School Market</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="navbar-nav">
-          <div class="nav-item text-nowrap">
-
-            <a class="nav-link px-3" href="/">Sign out</a>
-          </div>
-        </div>
-      </header>
+     
 
       <div class="container-fluid">
         <div class="row">
-          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-            <div class="position-sticky pt-3 sidebar-sticky sideM">
-              <ul class="nav flex-column">
-                <h6
-                  class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-                  <span>Administration</span>
-                  <a class="link-secondary" href="#" aria-label="Add a new report">
-                    <span data-feather="plus-circle" class="align-text-bottom"></span>
-                  </a>
-                </h6>
-                <li class="nav-item ">
-                  <a class="nav-link" aria-current="page" href="/MyItems.html">
-                    <span data-feather="home" class="align-text-bottom"></span>
-                    My Items
-                  </a>
-                </li>
-                <li class="nav-item ">
-                  <a class="nav-link" aria-current="page" href="/Login.html">
-                    <span data-feather="home" class="align-text-bottom"></span>
-                    Add New Item
-                  </a>
-                </li>
-
-
-
-
+          <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              
+              <ul class="navbar-nav mr-auto mt-2 mt-sm-0">
+           
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">TUT Market Place</a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Study Materials | </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Electronics |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Furniture |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Clothing and Accessories |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Services |</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" aria-current="page" href="/MyItems.html" style="color: aliceblue;">
+                      <span data-feather="home" class="align-text-bottom" ></span>
+                      My Items
+                    </a>
+                  </li>
+           
+              
               </ul>
-
+          
+              <form class="form-inline my-2 my-lg-0" style="padding-right: 3%;" action="/search" method="post">
+                <div class="input-group">
+                  <label for="search-input" class="sr-only"  >Search</label>
+                  <input type="text" id="search-input" class="form-control" name="searchQueryName" placeholder="Search" autocomplete="on" style="display: none;" required>
+                  <div class="input-group-append">
+                    <button class="btn btn-dark" type="submit" aria-label="Search">
+                      <i class="fas fa-search" style="display: none;"></i>
+                    </button>
+                    <a class="nav-link px-3" href="/" style="color: aliceblue;">Sign out</a>
+                  </div>
+                </div>
+              </form>
             </div>
           </nav>
+      
+         
 
 
-
-          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div
               class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
               <h1 class="h2">Administration</h1>

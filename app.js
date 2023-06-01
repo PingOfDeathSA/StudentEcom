@@ -8,10 +8,6 @@ const passport = require("passport");
 const passportLocalMongoose = require('passport-local-mongoose');
 const MongoStore = require('connect-mongo')(session);
 const LocalStrategy = require('passport-local').Strategy;
-// const encrypt= require("mongoose-encryption");
-// const bcrypt = require("bcrypt");
-// const saltRounds = 10;
-// const date = require(__dirname + "/date.js");
 mongoose.set('strictQuery', true);
 
 
