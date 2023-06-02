@@ -3,6 +3,7 @@
   background-color: #ebebeb; /* white background color */
   
 }
+
 .custom-border {
   border: 1px solid black;
 }
@@ -10,7 +11,11 @@
   background-color: lightgray;
 }
 
-
+.picture{
+  height: 150px !important;
+  width: 150px !important;
+  border-radius: 5px;
+}
 @font-face {
   font-family: 'Suissnord';
   src: url('path/to/your/font/Suissnord.woff2') format('woff2'),
@@ -79,6 +84,30 @@ width: 200px;
   transform: translateX(0);
 }
 
+.reply {
+  margin-top: 10px;
+}
+
+.reply-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reply-button {
+  margin-top: 5px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reply-button:hover {
+  background-color: #45a049;
+}
 
 
 .modal-body{
@@ -188,3 +217,45 @@ height: 100px;
   border-color: rgb(245, 36, 22);
 }
 
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;}

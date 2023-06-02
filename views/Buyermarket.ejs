@@ -81,7 +81,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Services |</a>
                   </li>
-                    <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link" href="/Inbox.html" style="color: aliceblue;">Inbox |</a>
                   </li>
                 </form>
@@ -218,11 +218,9 @@
               </h5>
     <p></p>
 <p style="margin: 0%;padding:0%"><span style="font-weight: 700; font-size:110%; margin-top:2%;margin-left:6%;" >R <%= item.price %>.00</span></p>
-<p style="margin: 0%;padding:0%"><span style="font-weight: 200; font-size:90%; margin-top:2%;margin-left:6%;" data-toggle="modal" data-target="#BuyerModal">Send Message</span></p>
-            
-
+           
                 
-
+<button type="button" class="btn btn-outline-success btn-sm" data-toggle="modal" data-target="#popup<%= item._id %>">Message</button>
 
                   <span type="button" class="badge badge-danger" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" data-toggle="modal" data-target="#popup<%= item._id %>"> View</span>
                 </div>
@@ -231,53 +229,8 @@
             <% }); %>
           </section>
         </div>
-        <div class="modal fade" id="BuyerModal" tabindex="-1" role="dialog" aria-labelledby="BuyerModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                
-
-                <h5 style="text-align: center;" class="modal-title" id="BuyerModalLabel">Don't have an Account? </h5>                <a type="button" class="btn btn-info btn-sm" href="/UseRegister.html"> Sign In</a>
-
-            
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <h6>Login</h6>
-                  <p>Enter your Email:</p>
-                  <form action="/BuyerLogin.html" method="POST">
-                  
-                      <input type="email" class="form-control" name="username">
-                      <p>Passoward:</p>
-                      <input type="password" class="form-control" name="password">
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-danger">Login</button>
-                    </div>
-                    </form>
-         
-               
-            </div>
-          </div>
-        
-        
-        <script>
-        function submitStudentNumber() {
-          // Get the entered student number from the input field
-          var studentNumber = document.getElementById("studentNumberInput").value;
-        
-          // You can perform further actions with the student number, such as validating or submitting it
-        
-          // Close the modal
-          $('#BuyerModal').modal('hide');
-        }
-        </script>
-        
-  
-      </div>
+    
+          
 
  
         
@@ -301,13 +254,13 @@
                               
           
                          
-                              <img class="ProductCardMain2" style="display: inline;" data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProductMain %>" alt="First slide">
+                              <img class="ProductCardMain" style="display: inline;" data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProductMain %>" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="ProductCardMain2" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct3 %>" alt="Second slide">
+                              <img class="ProductCardMain" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct3 %>" alt="Second slide">
                             </div>
                             <div class="carousel-item">
-                              <img class="ProductCardMain2" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct2 %>"  alt="Third slide">
+                              <img class="ProductCardMain" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct2 %>"  alt="Third slide">
                             </div>
                           </div>
                           <a class="carousel-control-prev" style="background-color: rgb(29, 28, 28); width: 50px; height: 30px; top: 50%; border-radius: 10px;" href="#carouselExampleControl-<%= item._id %>" role="button" data-slide="prev">
@@ -339,12 +292,19 @@
                     </script>
                  
                     <div class="modal-body" style="height: 250px;">
-    
-                      <img class="ProductCard2" style="display: inline;" data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct1 %>" alt="">
-                      <img class="ProductCard2" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct2 %>" alt="">
-                      <img class="ProductCard2" style="display: inline;"  data-toggle="modal" data-target="#popup<%= item._id %>" src="<%= item.imageProduct3 %>" alt="">
-                 
-                    </div>
+                        <h6>Send Message</h6>
+                        <form action="/Charts.html" method="POST">
+                            <div class="form-group">
+                              <label for="chatInput">Chat:</label>
+                              <input type="hidden" name="itemId" value="<%= item._id %>">
+                              <input type="text" class="form-control custom-input" id="chatInput" name="chatInput" style="height: 100px;" placeholder="Enter your message" value="Is this available?">
+
+                            </div>
+                            <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-success btn-sm">Send</button>
+                          </form>
+                          
+                      </div>
                     <div class="row">
                       <div class="col-4">
                         
@@ -353,7 +313,7 @@
                         <!-- Add content here -->
                       </div>
                       <div class="col-4" style="margin-bottom: 4%;">
-                        <button type="button" class="btn btn-outline-success">    <%= item.Contacts %></button>
+                      
                        
                       </div>
                     </div>
