@@ -184,45 +184,7 @@
                       </div>
                     </div>
                   <% }); %>
-                 
-                  <% Learn.forEach(function(item) { %>
-                    <div class="conversation">
-                     
-                        <img class="picture"src="<%= item.imageProductMain %>" onclick="toggleConversation(this)" alt="">
-                      <p class="product-id" onclick="toggleConversation(this)"><span class="badge badge-success">View Message</span></p>
-                      <div class="container" style="display: none;">
-                        <% if (item.Buyer!= user) { %>
-                          <div class="message buyer-message">
-                            <p><span class="sender">Buyer:</span> <%= item.Message %></p>
-                            <p><span class="sender">Reply:</span> <%= item.Reply %></p>
-                          </div>
-                          <div class="reply">
-                            <input type="text" placeholder="Reply" class="reply-input">
-                            <button class="reply-button">Send</button>
-                          </div>
-                         
-                        <% } else { %>
-                          <p><span class="sender" style="margin-left: 80%;">Reply:</span> <%= item.Buyer %></p>
-                          <div class="message messenger-message">
-                            <p><span class="sender">Buyer:</span> <%= item.Message %></p>
-                            <p><span class="sender"style="margin-left: 80%;">Me:</span> <%= item.Reply %></p>
-                          </div>
-                          <div class="reply">
-                            <form action="/Charts.html" method="POST">
-                              <input type="hidden" name="itemId" value="<%= item._id %>">
-                              <input type="hidden" name="product_name" value="<%= item.Product_Name %>">
-                              <input type="hidden" name="image_url" value="<%= item.imageProductMain %>">
-                              <input type="text" placeholder="Reply" name="reply" class="reply-input">
-                            
-                              <button type="submit" style="margin-left: 70%; margin-top:2%" class="btn btn-primary">Send</button>
-                            </form>
-                  
-                          </div>
-                          <span class="time-left"><%= item.Date %></span>
-                        <% } %>
-                      </div>
-                    </div>
-                  <% }); %>
+
                   
               </section>
               
